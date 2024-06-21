@@ -20,7 +20,8 @@ MAC_SIZE = 20
 import base64
 from os import urandom
 from hashlib import sha1, sha256
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
 trans_5C = ''.join([chr (x ^ 0x5c) for x in range(256)])
 trans_36 = ''.join([chr (x ^ 0x36) for x in range(256)])
