@@ -18,9 +18,9 @@ import socket, threading, re, os, time, random, base64
 import webbrowser, subprocess, json, sys, requests
 import urllib.request, urllib.error, urllib.parse
 from urllib.parse import urlparse as urlparse
-from core.tools.crypter import Cipher
 from time import gmtime, strftime, strptime
-from Crypto.Cipher import AES
+from cryptography.hazmat.primitives import padding
+from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from hashlib import sha1, sha256
 from decimal import Decimal
 from random import shuffle
